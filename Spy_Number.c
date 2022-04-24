@@ -3,12 +3,13 @@ int main()
 {
     int n,r,sum=0,mul=1;
     scanf("%d",&n);
-    while(n>0)
+    while(n!=0)
     {
-        r=n%10;
-        n=n/10;
-        sum=sum+r;
-        mul=mul*r;
+       r=n%10;
+       sum=sum+r;
+       mul=mul*r;
+       n=n/10;
+       
     }
     if(sum==mul)
     {
@@ -18,4 +19,5 @@ int main()
     {
         printf("Not Spy Number");
     }
+    
 }
