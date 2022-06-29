@@ -3,7 +3,7 @@ int main()
 {
     int m,n;
     scanf("%d %d",&m,&n);
-    int a[m][n],i,j,es=0,os=0;
+    int a[m][n],i,j,sum=0,sum1=0;
     for(i=0; i<m; i++)
     {
         for(j=0; j<n; j++)
@@ -17,13 +17,19 @@ int main()
         {
             if(i%2==0)
             {
-                es=es+a[i][j];
-            }
-            else if(i%2!=0)
-            {
-                os=os+a[i][j];
+                sum=sum+a[i][j];
             }
         }
     }
-    printf("%d %d",es,os);
+    for(i=0; i<m; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            if(i%2!=0)
+            {
+                sum1=sum1+a[i][j];
+            }
+        }
+    }
+    printf("%d %d",sum,sum1);
 }
